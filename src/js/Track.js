@@ -1,7 +1,7 @@
 var currentTrack = 2, synchTrack = true, framesPerBeat = 1;
-const MUTAG = window.mutag;
+//const MUTAG = window.mutag;
 
-var Track = function(src, beat, offset, introOffset, climaxOffset)
+var Track = function(src, title, beat, offset, introOffset, climaxOffset)
 {
     this.beat = beat;
     this.currentBeat = 0;
@@ -10,7 +10,7 @@ var Track = function(src, beat, offset, introOffset, climaxOffset)
     this.offsets = [introOffset, offset, climaxOffset];
     this.audio[1] = new Audio();
     this.audio[1].src = "music/" + src + ".mp3";
-    this.getTags();
+    this.getTags(title);
     var temp = this;
     this.audio[1].addEventListener("ended", function() {
         temp.resetBeat();
@@ -44,12 +44,16 @@ var Track = function(src, beat, offset, introOffset, climaxOffset)
     }
 };
 
-Track.prototype.getTags = function()
+Track.prototype.getTags = function(title)
 {
+    /*
     fetch(this.audio[1].src)
         .then(response => response.blob())
         .then(MUTAG.fetch)
-        .then((tags) => { this.tags = tags; });
+        .then((tags) => { this.tags = tags; });*/
+    this.album = "Pokemon Sword / Shield";
+    this.artist = "Minako Adachi and Go Ichinose";
+    this.title = title;
 };
 
 Track.prototype.resetAudio = function()
