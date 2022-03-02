@@ -55,11 +55,11 @@ function loadSprites() {
 
 function loadAudio() {
     tracks = [
-        new Track("rose", 0.816326531, 0.005, 0),
-        new Track("route8", 0.568682927, 0, 0),
-        new Track("pokejobs", 0.475, 0),
-        new Track("gym", 0.42871875, -0.007, -0.01, -0.01),
-        new Track("leon", 0.361694118, 0, 0)
+        new Track("rose", "Battle! Chairman Rose", 0.816326531, 0.005, 0),
+        new Track("route8", "Galar Route 8", 0.568682927, 0, 0),
+        new Track("pokejobs", "PokeJobs", 0.475, 0),
+        new Track("gym", "Battle! Gym Leader", 0.42871875, -0.007, -0.01, -0.01),
+        new Track("leon", "Battle! Champion Leon", 0.361694118, 0, 0)
     ];
 };
 
