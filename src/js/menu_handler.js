@@ -177,9 +177,9 @@ var musicMenu = function(mouse)
     textAlign(LEFT, TOP);
     text("Title:\n\n\nArtist(s):\n\n\nAlbum:\n\n\nSpeed:", 50, 100);
     var lineHeight = textAscent() + textDescent() + 1.5;
-    text(tracks[currentTrack].tags.TIT2, 75, 100+lineHeight, 390, 80);
-    text(tracks[currentTrack].tags.TPE1, 75, 100+lineHeight*4, 390, 80);
-    text(tracks[currentTrack].tags.TALB, 75, 100+lineHeight*7, 390, 80);
+    text(tracks[currentTrack].title, 75, 100+lineHeight, 390, 80);
+    text(tracks[currentTrack].artist, 75, 100+lineHeight*4, 390, 80);
+    text(tracks[currentTrack].album, 75, 100+lineHeight*7, 390, 80);
     
     strokeWeight(2);
     rect(90, 408, 325, 4);
