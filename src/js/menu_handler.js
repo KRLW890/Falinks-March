@@ -160,7 +160,7 @@ var musicMenu = function(mouse)
     noStroke();
     textSize(20);
     text("Begin", 200, 550);
-    text("Synch speed", 600, 550);
+    text("Sync speed", 600, 550);
     
     image(images.musicmenu, 0, 0);
     image(images.selected, 476, 100+75*currentTrack);
@@ -201,14 +201,14 @@ var musicMenu = function(mouse)
     text("faster", 430, 410);
     textAlign(CENTER, CENTER);
     if (synchTrack)
-        text("Speed synched to track", 252, 430);
+        text("Speed synced to track", 252, 430);
     else if (framesPerBeat == 5)
     {
         fill(235, 0, 0);
         text("SPICY HOT MODE ACTIVATED", 252, 430);
     }
     else
-        text("Speed desynched from track", 252, 430);
+        text("Speed desynced from track", 252, 430);
 };
 
 var endScreen = function(message)
@@ -278,4 +278,5 @@ var mouseReleased = function()
     if (gamestate == "music")
         noLoop();
 };
+
 
