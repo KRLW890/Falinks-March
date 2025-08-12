@@ -169,7 +169,7 @@ var musicMenu = function(mouse)
     stroke(97, 50, 14);
     textSize(25);
     for (var i = 0; i < 5; i++)
-        text(tracks[i].tags.TIT2, 487, 110+75*i, 280, 55);
+        text(tracks[i].title, 487, 110+75*i, 280, 55);
     fill(255, 174, 111);
     textSize(27);
     text("Selected track:", 237, 70);
@@ -278,3 +278,4 @@ var mouseReleased = function()
     if (gamestate == "music")
         noLoop();
 };
+
